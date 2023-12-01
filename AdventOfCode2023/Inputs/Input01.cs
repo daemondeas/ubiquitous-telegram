@@ -8,7 +8,7 @@ public class Input01 : AbstractInput<FSharpList<string>, FSharpList<string>>
 
     protected override FSharpList<string> ParseInputTwo(string input) => ParseInput(input);
 
-    protected override long SolveFirstPuzzle(FSharpList<string> input) => throw new NotImplementedException();
+    protected override long SolveFirstPuzzle(FSharpList<string> input) => Fsharp.Solutions.Day01.firstPuzzle(input);
     
     protected override long SolveSecondPuzzle(FSharpList<string> input) => throw new NotImplementedException();
     
