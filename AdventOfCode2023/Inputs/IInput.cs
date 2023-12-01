@@ -7,6 +7,8 @@ public interface IInput
     long SecondPuzzle(string input);
     
     string TestInput { get; }
+
+    string SecondTestInput { get; }
     
     string RealInput { get; }
 }

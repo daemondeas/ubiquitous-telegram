@@ -13,6 +13,6 @@ public class Solver
         _inputSolvers.TryGetValue(day, out var inputSolver)
             ? firstPuzzle
                 ? inputSolver.FirstPuzzle(testInput ? inputSolver.TestInput : inputSolver.RealInput)
-                : inputSolver.SecondPuzzle(testInput ? inputSolver.TestInput : inputSolver.RealInput)
+                : inputSolver.SecondPuzzle(testInput ? inputSolver.SecondTestInput : inputSolver.RealInput)
             : throw new ArgumentOutOfRangeException(nameof(day));
 }

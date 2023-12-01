@@ -10,9 +10,17 @@ public class Input01 : AbstractInput<FSharpList<string>, FSharpList<string>>
 
     protected override long SolveFirstPuzzle(FSharpList<string> input) => Fsharp.Solutions.Day01.firstPuzzle(input);
     
-    protected override long SolveSecondPuzzle(FSharpList<string> input) => throw new NotImplementedException();
+    protected override long SolveSecondPuzzle(FSharpList<string> input) => Fsharp.Solutions.Day01.secondPuzzle(input);
     
     public override string TestInput => "1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet";
+
+    public override string SecondTestInput => @"two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen";
 
     public override string RealInput => @"four9one
 bbzhsmnmtf8kftwosevenxfkssgrcjthree

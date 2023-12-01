@@ -15,5 +15,6 @@ public abstract class AbstractInput<TU, TV> : IInput
     protected abstract long SolveSecondPuzzle(TV input);
 
     public abstract string TestInput { get; }
+    public virtual string SecondTestInput => TestInput;
     public abstract string RealInput { get; }
 }
