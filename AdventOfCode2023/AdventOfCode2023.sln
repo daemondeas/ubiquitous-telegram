@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{2E13E9EC-C37B-45FE-A9E8-29848F8A07E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inputs", "Inputs\Inputs.csproj", "{336283B5-6C39-4656-8AC0-555F033681FA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fsharp.Solutions", "Fsharp.Solutions\Fsharp.Solutions.fsproj", "{6261EC36-6F8F-44E9-9684-ACC2A7EBD603}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E13E9EC-C37B-45FE-A9E8-29848F8A07E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E13E9EC-C37B-45FE-A9E8-29848F8A07E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E13E9EC-C37B-45FE-A9E8-29848F8A07E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E13E9EC-C37B-45FE-A9E8-29848F8A07E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336283B5-6C39-4656-8AC0-555F033681FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336283B5-6C39-4656-8AC0-555F033681FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336283B5-6C39-4656-8AC0-555F033681FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336283B5-6C39-4656-8AC0-555F033681FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6261EC36-6F8F-44E9-9684-ACC2A7EBD603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6261EC36-6F8F-44E9-9684-ACC2A7EBD603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6261EC36-6F8F-44E9-9684-ACC2A7EBD603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6261EC36-6F8F-44E9-9684-ACC2A7EBD603}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
