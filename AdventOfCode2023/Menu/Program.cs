@@ -25,7 +25,7 @@ var solver = new Solver(
     new Dictionary<int, IInput>
     {
         { 1, new Input01() },
-        // { 2, new Input02() },
+        { 2, new Input02() },
         // { 3, new Input03() },
         // { 4, new Input04() },
         // { 5, new Input05() },
