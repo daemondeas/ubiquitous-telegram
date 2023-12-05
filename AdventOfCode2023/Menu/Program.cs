@@ -27,7 +27,7 @@ var solver = new Solver(
         { 1, new Input01() },
         { 2, new Input02() },
         { 3, new Input03() },
-        // { 4, new Input04() },
+        { 4, new Input04() },
         // { 5, new Input05() },
         // { 6, new Input06() },
         // { 7, new Input07() },

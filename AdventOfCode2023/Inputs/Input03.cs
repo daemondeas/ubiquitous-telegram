@@ -33,6 +33,11 @@ public class Input03 : AbstractInput<(FSharpList<Day03.number>, FSharpList<Day03
                     }
                 }
             }
+
+            if (xStart != -1)
+            {
+                numbers.Add(new Day03.number(value: int.Parse(num), xLow: xStart, xHigh: rows[y].Length - 1, line: y));
+            }
         }
 
         return (ListModule.OfSeq(numbers), ListModule.OfSeq(symbols));
@@ -40,15 +45,46 @@ public class Input03 : AbstractInput<(FSharpList<Day03.number>, FSharpList<Day03
 
     protected override (FSharpList<Day03.number>, FSharpList<Day03.position>) ParseInputTwo(string input)
     {
-        throw new NotImplementedException();
+        var numbers = new List<Day03.number>();
+        var gears = new List<Day03.position>();
+        var rows = input.Split('\n');
+        for (var y = 0; y < rows.Length; y++){
+            var num = string.Empty;
+            var xStart = -1;
+            for (var x = 0; x < rows[y].Length; x++){
+                if (rows[y][x] >= '0' && rows[y][x] <= '9'){
+                    if (xStart == -1){
+                        xStart = x;
+                    }
+
+                    num += rows[y][x];
+                }
+                else {
+                    if (xStart != -1){
+                        numbers.Add(new Day03.number(value: int.Parse(num), xLow: xStart, xHigh: x - 1, line: y));
+                        xStart = -1;
+                        num = string.Empty;
+                    }
+
+                    if(rows[y][x] == '*'){
+                        gears.Add(new Day03.position(x: x, y: y));
+                    }
+                }
+            }
+
+            if (xStart != -1)
+            {
+                numbers.Add(new Day03.number(value: int.Parse(num), xLow: xStart, xHigh: rows[y].Length - 1, line: y));
+            }
+        }
+
+        return (ListModule.OfSeq(numbers), ListModule.OfSeq(gears));
     }
 
     protected override long SolveFirstPuzzle((FSharpList<Day03.number>, FSharpList<Day03.position>) input) => Day03.firstPuzzle(input.Item1, input.Item2);
 
-    protected override long SolveSecondPuzzle((FSharpList<Day03.number>, FSharpList<Day03.position>) input)
-    {
-        throw new NotImplementedException();
-    }
+    protected override long SolveSecondPuzzle((FSharpList<Day03.number>, FSharpList<Day03.position>) input) =>
+        Day03.secondPuzzle(input.Item1, input.Item2);
 
     public override string TestInput => @"467..114..
 ...*......

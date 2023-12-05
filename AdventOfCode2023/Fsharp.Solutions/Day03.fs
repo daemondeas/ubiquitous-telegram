@@ -28,3 +28,11 @@ module Day03 =
 
     let firstPuzzle numbers symbols =
         List.filter (isPartNumber symbols) numbers |> List.map (_.value) |> List.sum
+        
+    let isValidGear adjacentPositions gear =
+        List.filter (List.contains gear) adjacentPositions |> List.length |> (fun a -> a = 2)
+        
+    let secondPuzzle numbers gears =
+        let adjacentPositions = List.map getAdjacent numbers
+        List.filter (isValidGear adjacentPositions) gears |> List.map (fun g -> List.filter (isPartNumber [g]) numbers)
+        |> List.map (List.map (_.value)) |> List.map (List.fold (*) 1) |> List.sum
