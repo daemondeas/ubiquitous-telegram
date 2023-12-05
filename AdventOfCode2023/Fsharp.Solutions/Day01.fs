@@ -45,7 +45,7 @@ module Day01 =
 
     let numberFromLineRegex line =
         let matches = rx.Matches(line)
-        (10 * (convertToNumber ((Seq.head matches) |> (fun m -> m.Value)))) + (convertToNumber ((Seq.last matches) |> (fun m -> m.Value)))
+        (10 * (convertToNumber ((Seq.head matches) |> (_.Value)))) + (convertToNumber ((Seq.last matches) |> (_.Value)))
 
     let secondPuzzle (input: string list) =
         List.map numberFromLineRegex input |> List.sum

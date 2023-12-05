@@ -19,7 +19,7 @@ module Day02 =
         List.map (isRoundValid availableRed availableGreen availableBlue) game.rounds |> List.fold (&&) true
 
     let firstPuzzle input =
-        List.filter (isGameValid 12 13 14) input |> List.map (fun g -> g.id) |> List.sum
+        List.filter (isGameValid 12 13 14) input |> List.map (_.id) |> List.sum
 
     let rec roundsPower red green blue rounds =
         match rounds with

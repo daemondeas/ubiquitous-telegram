@@ -27,4 +27,4 @@ module Day03 =
         getAdjacent n |> listContains symbols
 
     let firstPuzzle numbers symbols =
-        List.filter (isPartNumber symbols) numbers |> List.map (fun n -> n.value) |> List.sum
+        List.filter (isPartNumber symbols) numbers |> List.map (_.value) |> List.sum
