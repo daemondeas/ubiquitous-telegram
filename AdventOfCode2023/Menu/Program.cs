@@ -32,7 +32,7 @@ var solver = new Solver(
         { 6, new Input06() },
         { 7, new Input07() },
         { 8, new Input08() },
-        // { 9, new Input09() },
+        { 9, new Input09() },
         // { 10, new Input10() },
         { 11, new Input11() },
         // { 12, new Input12() },
